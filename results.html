@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Results – Herfect</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="results.js"></script>
+</head>
+<body>
+  <header class="top">
+    <span class="brand">Herfect<sup>^^</sup></span>
+    <nav class="tabs" aria-label="Pages">
+      <a href="index.html">Quick Questions</a>
+      <a href="results.html" aria-current="page">Results</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <form class="gate" id="gate">
+      <h1>Results</h1>
+      <p>Enter the team passcode to see every answer.</p>
+      <div class="gate-row">
+        <input type="password" id="passcode" autocomplete="current-password" aria-label="Passcode" placeholder="Passcode" required>
+        <button class="submit" type="submit">Show results</button>
+      </div>
+      <p class="error" id="gate-error" role="alert" hidden></p>
+    </form>
+
+    <section id="report" hidden>
+      <div class="report-head">
+        <h1>Results</h1>
+        <div class="filters">
+          <label>From <input type="date" id="from"></label>
+          <label>To <input type="date" id="to"></label>
+          <button class="submit ghost small" type="button" id="refresh">Refresh</button>
+          <button class="submit ghost small" type="button" id="csv">Download CSV</button>
+        </div>
+      </div>
+      <p class="total" id="total"></p>
+      <div id="summary"></div>
+      <h2 class="section">All answers</h2>
+      <div class="table-wrap"><table id="rows"></table></div>
+    </section>
+  </main>
+</body>
+</html>

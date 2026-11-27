@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quick Questions – Herfect</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="questions.js"></script>
+</head>
+<body>
+  <header class="top">
+    <span class="brand">Herfect<sup>^^</sup></span>
+    <nav class="tabs" aria-label="Pages">
+      <a href="index.html" aria-current="page">Quick Questions</a>
+      <a href="results.html">Results</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <h1>Quick Questions</h1>
+      <p>Seven short questions about daily gummy supplements. It takes about two minutes.</p>
+    </section>
+
+    <form id="survey" novalidate>
+      <div id="questions"></div>
+      <p class="error" id="error" role="alert" hidden></p>
+      <button class="submit" type="submit">Submit</button>
+    </form>
+
+    <section class="thanks" id="thanks" hidden tabindex="-1">
+      <h2>Thank you!</h2>
+      <p>Your answers are saved.</p>
+      <button class="submit ghost" type="button" id="again">Answer again for someone else</button>
+    </section>
+  </main>
+</body>
+</html>
