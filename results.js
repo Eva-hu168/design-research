@@ -159,9 +159,5 @@ to.addEventListener("change", render);
 document.getElementById("refresh").addEventListener("click", () => open(sessionStorage.getItem(KEY) ?? ""));
 document.getElementById("csv").addEventListener("click", csv);
 
-// `results.html#k=<passcode>` opens the report directly: the fragment never reaches a server, and it is removed from
-// the address bar and the history entry at once.
-const fragment = new URLSearchParams(location.hash.slice(1)).get("k");
-if (fragment) history.replaceState(null, "", location.pathname + location.search);
-const saved = fragment ?? sessionStorage.getItem(KEY);
+const saved = sessionStorage.getItem(KEY);
 if (saved) open(saved);
